@@ -1,8 +1,8 @@
 # Angular Template
 
-#### _10-15-16_
+#### _10-17-16_
 
-#### By _**Aimen Khakwani**_
+#### By _****_
 
 ## Description
 
