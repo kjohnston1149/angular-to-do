@@ -4,18 +4,25 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
   <div class="container">
-   <h1>My First Angular 2 App</h1>
-   <h3 (click)="showDetails(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
-   <h1>Edit Task</h1>
-    <div>
-      <label>Enter Task Description:</label>
-      <input [(ngModel)]="selectedTask.description">
+    <h1>My First Angular 2 App</h1>
+<!-- click event listener for loop -->
+    <div *ngFor="let currentTask of tasks">
+      <h3>{{ currentTask.description }}</h3>
+      <button (click)="showDetails(currentTask)" class="btn btn-default">Edit</button>
     </div>
-    <div>
-      <label>Enter Task ID:</label>
-      <input [(ngModel)]="selectedTask.id">
+    <div *ngIf="selectedTask">
+      <h1>Edit Task</h1>
+      <div>
+        <label>Enter Task Description:</label>
+        <input [(ngModel)]="selectedTask.description" class="form-control"> <!-- Brackets mean input -->
+      </div>
+      <div>
+        <label>Enter Task ID:</label>
+        <input [(ngModel)]="selectedTask.id">
+        <button (click)="finishedEditing()" class="btn btn-default">Done</button>
+      </div>
     </div>
- </div>
+  </div>
   `
 })
 
@@ -27,10 +34,14 @@ export class AppComponent {
     new Task("Do the laundry.", 3)
   ];
 
-  selectedTask: Task = this.tasks[0];
+  selectedTask: Task = null;
   showDetails(clickedTask: Task) {
     this.selectedTask = clickedTask;
   }
+
+  finishedEditing() {
+    this.selectedTask = null;
+    }
 }
 
 export class Task {
