@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Task } from './task.model';
+import { WorkTask } from './task.model';
+import { HomeTask } from './task.model';
+import { HobbyTask } from './task.model';
 
 
 @Component({
@@ -26,10 +29,10 @@ import { Task } from './task.model';
 
 export class AppComponent {
   public masterTaskList: Task[] = [
-    new Task("Create To-Do List app.", 0, 'high'),
+    new WorkTask("Tuesday", "Create To-Do List app.", 0, 'high'),
     new Task("Learn Kung Fu.", 1, 'low'),
-    new Task("Rewatch all the Lord of the Rings movies.", 2, 'low'),
-    new Task("Do the laundry.", 3, 'high')
+    new HomeTask("Rewatch all the Lord of the Rings movies.", 2, 'low'),
+    new HobbyTask("Do the laundry.", 3, 'high')
   ];
 
   selectedTask: Task = null;
