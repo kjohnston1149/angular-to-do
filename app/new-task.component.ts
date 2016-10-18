@@ -9,7 +9,7 @@ import { Task } from './task.model';
       <div class="form-group">
         <input #newDescription class="form-control" placeholder="new task">
       </div>
-      <div class="form-group">
+      <div class="form-group addTask">
         <input #newID class="form-control" placeholder="new task ID"><br>
         <button (click)="
         addClicked(newDescription.value, newID.value);

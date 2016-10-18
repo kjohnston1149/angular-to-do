@@ -2,6 +2,38 @@ body {
   font-family: monospace;
 }
 
+span {
+  color: red;
+}
+
+button {
+  cursor: pointer;
+}
+
+task-display {
+  float: left;
+}
+
 .edit {
   padding-top: 5%;
+}
+
+.btn-sm {
+  border: none;
+  background: transparent;
+  color: #2d5986;
+}
+
+.btn-sm:hover {
+  border: none;
+  background: transparent;
+  color: black;
+}
+
+.btn-default {
+  border-radius: 0px;
+  background: transparent;
+  background-color: #2d5986;
+  color: white;
+  width: 80px;
 }
