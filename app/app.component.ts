@@ -6,7 +6,7 @@ import { Task } from './task.model';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>My First Angular 2 App</h1>
+    <h1>Another Boring To Do List</h1>
     <pies></pies>
     <task-list
       [childTaskList]="masterTaskList"
@@ -31,6 +31,7 @@ export class AppComponent {
     new Task("Rewatch all the Lord of the Rings movies.", 2),
     new Task("Do the laundry.", 3)
   ];
+  
   selectedTask: Task = null;
   showDetails(clickedTask: Task) {
     this.selectedTask = clickedTask;
