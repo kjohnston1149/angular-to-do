@@ -35,4 +35,4 @@ jQuery_
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2016 **_Aimen Khakwani_**
+Copyright (c) 2016 **_Kevin Johnston_**
