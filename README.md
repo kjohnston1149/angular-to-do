@@ -2,7 +2,7 @@
 
 #### _10-17-16_
 
-#### By _****_
+#### By _Kevin Johnston_
 
 ## Description
 
